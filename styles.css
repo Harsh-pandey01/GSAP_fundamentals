@@ -9,10 +9,37 @@ html,body{
     width: 100%;
     height: 100%;
     background-color: black;
+    font-family: "Roboto",sans-serif;
 }
 
-#box{
+/* #box{
     width: 200px;
     height: 200px;
     background-color: red;
+} */
+
+#nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 50px;
+    font-size: 25px;
+}
+.logo{
+    font-size: 25px;
+}
+#hero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 75px;
 }

@@ -62,14 +62,42 @@
 
 // yoyo :-See when we use repeat , it goes to end and again start from the beginning ,  if we want to be a good
 // animation to start to end --> then to start form end toward start and repeat this , we use 'YOYO' property
-gsap.from('#box',{
-    x: 1000,
-  duration: 2,
-  delay: 1,
-  rotate:360,
-  backgroundColor:"blue",
-  borderRadius:'100%',
-  scale:2,
-    // repeat:-1,
-    yoyo :true
- })
+
+
+// gsap.from('#box',{
+//     x: 1000,
+//   duration: 2,
+//   delay: 1,
+//   rotate:360,
+//   backgroundColor:"blue",
+//   borderRadius:'100%',
+//   scale:2,
+//     // repeat:-1,
+//     yoyo :true
+//  })
+
+
+//  ----------------------------------- TimeLine in GSAP ---------------------------------- 
+// Lets apply timeline to nav-bar
+
+let tl = gsap.timeline()
+tl.from('.logo',{
+    y:-30,
+    opacity:0,
+    duration:1,
+    delay:0.3
+})
+tl.from('li',{
+    y:-30,
+    opacity:0,
+    duration:1,
+    delay:0.3,
+    stagger:0.5
+})
+tl.from('#hero',{
+    opacity:0 ,
+    scale:0.5,
+    duration:0.5
+
+})
+
