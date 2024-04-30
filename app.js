@@ -80,24 +80,87 @@
 //  ----------------------------------- TimeLine in GSAP ---------------------------------- 
 // Lets apply timeline to nav-bar
 
-let tl = gsap.timeline()
-tl.from('.logo',{
-    y:-30,
-    opacity:0,
-    duration:1,
-    delay:0.3
-})
-tl.from('li',{
-    y:-30,
-    opacity:0,
-    duration:1,
-    delay:0.3,
-    stagger:0.5
-})
-tl.from('#hero',{
-    opacity:0 ,
-    scale:0.5,
-    duration:0.5
+// let tl = gsap.timeline()
+// tl.from('.logo',{
+//     y:-30,
+//     opacity:0,
+//     duration:1,
+//     delay:0.3
+// })
+// tl.from('li',{
+//     y:-30,
+//     opacity:0,
+//     duration:1,
+//     delay:0.3,
+//     stagger:0.5
+// })
+// tl.from('#hero',{
+//     opacity:0 ,
+//     scale:0.5,
+//     duration:0.5
 
+// })
+
+
+// ------------------------------> Scroll Trigger <--------------------------
+
+
+
+// If we want our animation to run if the user scroll to that page then we use scrool trigger
+// The animation will start as the user scroll to certain page
+
+
+// Method 1 :- Using the simple name of the selector 
+
+// gsap.from('.page1 .box' , {
+//     opacity:0,
+//     duration:2,
+//     delay:1,
+//     borderRadius : '100%',
+//     rotate:360
+// })
+// gsap.from('.page2 .box' , {
+//     opacity:0,
+//     duration:2,
+
+//     borderRadius : '100%',
+//     rotate:360,
+//     scrollTrigger : '.page2 .box'
+// })
+// gsap.from('.page3 .box' , {
+//     opacity:0,
+//     duration:2,
+
+//     borderRadius : '100%',
+//     rotate:360,
+//     scrollTrigger : '.page3 .box'
+// })
+
+// Method 2:- Using some of the scrollTrigger related properies
+
+gsap.from('.page1 .box' , {
+    opacity:0,
+    duration:2,
+    delay:1,
+    borderRadius : '100%',
+    rotate:360
 })
+gsap.from('.page2 .box' , {
+    opacity:0,
+    duration:2,
+    borderRadius : '100%',
+    rotate:360,
+    scrollTrigger : {
+        trigger:'.page2 .box',
+        scroller : 'body',
+        markers:true,
+        start : "top 40%"
+    }
+})
+
+
+
+
+
+
 
