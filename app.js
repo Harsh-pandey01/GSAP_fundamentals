@@ -138,28 +138,51 @@
 
 // Method 2:- Using some of the scrollTrigger related properies
 
-gsap.from('.page1 .box' , {
-    opacity:0,
-    duration:2,
-    delay:1,
-    borderRadius : '100%',
-    rotate:360
-})
+// gsap.from('.page1 .box' , {
+//     opacity:0,
+//     duration:2,
+//     delay:1,
+//     borderRadius : '100%',
+//     rotate:360
+// })
+// gsap.from('.page2 .box' , {
+//     opacity:0,
+//     duration:2,
+//     borderRadius : '100%',
+//     rotate:360,
+//     scrollTrigger : {
+//         trigger:'.page2 .box',
+//         scroller : 'body',
+//         markers:true,
+//         start : "top 40%"
+//     }
+// })
+
+
+// But jaise hi start match hota hai toh animation chal jata hai aur khatma hojata hai
+// We want animation to happen as we are scrolling the page not soon after the trigger
+
+// -------------------------------> Scrub property of scroll trigger
+// value  of scrub can be true or from [0-5] ke bich me according to smoothness
+
 gsap.from('.page2 .box' , {
-    opacity:0,
-    duration:2,
+    opacity:0 ,
+    scale:0 ,
+    rotate : 270,
+    duration: 2 ,
     borderRadius : '100%',
-    rotate:360,
-    scrollTrigger : {
-        trigger:'.page2 .box',
-        scroller : 'body',
-        markers:true,
-        start : "top 40%"
+    scrollTrigger :{
+        trigger:'.page2',
+        scroller:'body',
+        markers:true ,
+        start:'top 50%',
+        end:'top 20%',
+        scrub:5,
+
+// New property of the scroll trigger is -------> pin used to pin the page or say parent element until the animation of the child ends
+    pin :true 
     }
 })
-
-
-
 
 
 
