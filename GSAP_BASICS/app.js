@@ -165,24 +165,24 @@
 // -------------------------------> Scrub property of scroll trigger
 // value  of scrub can be true or from [0-5] ke bich me according to smoothness
 
-gsap.from('.page2 .box' , {
-    opacity:0 ,
-    scale:0 ,
-    rotate : 270,
-    duration: 2 ,
-    borderRadius : '100%',
-    scrollTrigger :{
-        trigger:'.page2',
-        scroller:'body',
-        markers:true ,
-        start:'top 50%',
-        end:'top 20%',
-        scrub:5,
+// gsap.from('.page2 .box' , {
+//     opacity:0 ,
+//     scale:0 ,
+//     rotate : 270,
+//     duration: 2 ,
+//     borderRadius : '100%',
+//     scrollTrigger :{
+//         trigger:'.page2',
+//         scroller:'body',
+//         markers:true ,
+//         start:'top 50%',
+//         end:'top 20%',
+//         scrub:5,
 
-// New property of the scroll trigger is -------> pin used to pin the page or say parent element until the animation of the child ends
-    pin :true 
-    }
-})
+// // New property of the scroll trigger is -------> pin used to pin the page or say parent element until the animation of the child ends
+//     pin :true 
+//     }
+// })
 
 
 
